@@ -1,0 +1,65 @@
+.jumbotron-extend {
+    position: relative;
+    height: 95vh;
+    min-height: 300px;
+    margin-bottom: 60px;
+    background-color: #5a5a5a;
+    background-size: cover;
+}
+
+.jumbotron-container {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.site-name {
+    margin-bottom: 40px;
+    font-family: 'arial';
+    font-size: 100px;
+}
+
+.list-inline {
+    display: flex;
+    justify-content: center;
+}
+
+.sns-button {
+    position: absolute;
+    font-size: 30px;
+}
+
+.profile_image {
+    background-image: url("images/profile.jpg");
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-size: cover;
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.section_titles {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+}
+
+.anchor {
+    display: block;
+    padding-top: 30px;
+    margin-top: -30px;
+}
+
+.card-img-top {
+    height: 250px;
+}
+
