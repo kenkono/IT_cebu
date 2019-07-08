@@ -1,0 +1,43 @@
+.carousel-item img {
+    max-height: 450px;
+}
+
+.jumbotron.index {
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+}
+
+.footer-copyright {
+    color: white;
+    padding-left: 35px;
+}
+
+.footer-sns {
+    color: white;
+    margin: 0 auto;
+}
+
+.card-size {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about h1 {
+    text-align: center;
+}
+
+.jumbotron.about {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-top: 5rem;
+    padding-bottom: 0;
+
+}
+
+.about img {
+    border-radius: 50%;
+}
+
+.about p {
+    margin-bottom: 3rem;
+}
