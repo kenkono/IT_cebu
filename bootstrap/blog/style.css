@@ -14,7 +14,8 @@
 
 .footer-sns {
     color: white;
-    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
 }
 
 .card-size {
@@ -28,7 +29,7 @@
 
 .jumbotron.about {
     margin-top: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     padding-top: 5rem;
     padding-bottom: 0;
 
@@ -40,4 +41,8 @@
 
 .about p {
     margin-bottom: 3rem;
+}
+
+.about-img {
+    margin: o auto;
 }
