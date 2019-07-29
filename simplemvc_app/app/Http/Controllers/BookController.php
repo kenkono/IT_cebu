@@ -14,11 +14,16 @@ class BookController extends Controller
 
     public function store() {
 
-        Auth::user()->books()->create([
+        $type_id = 1; //this is the ID of manga in types table
+
+        // This function eill create a book the belongs to the current login user
+        $book = Auth::user()->books()->create([
             'title' => request()->title,
             'description' => request()->description
         ]);
         
+        $book->types()->attach([1, 2]);
+
         // $book = Book::create([
         //     'title' => request()->title,
         //     'description' => request()->description,

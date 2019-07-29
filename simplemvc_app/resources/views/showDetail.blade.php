@@ -10,6 +10,11 @@
     <p>ID: {{$book->id}}</p>
     <p>Title: {{$book->title}}</p>
     <p>Description: {{$book->description}}</p>
+    <span>
+        @foreach($book->types as $type)
+            <h3>{{ $type->type_name }}</h3>
+        @endforeach
+    </span>
     <form method="POST" action="/delete/{{$book->id}}">
         @csrf
     <input type="submit" value="delete">
