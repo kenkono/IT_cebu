@@ -38,9 +38,9 @@
 
                     <div class="media">
                         <div class="media-body">
-                            <div class="btn-group btn-group-justified">
+                            <div class="btn-group btn-group-justified d-flex justify-content-center">
                                 <div class="well text-center">
-                                    <h4>{{ $blogs->count() }}</h4>
+                                    <h4>{{$blogs->count()}}</h4>
                                     <small>blogs posted</small>
                                 </div>
                             </div>
@@ -62,5 +62,3 @@
     </div>
 </div>
 @endsection
-12:19
- Press Enter to send Return

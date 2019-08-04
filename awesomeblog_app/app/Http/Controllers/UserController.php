@@ -35,6 +35,8 @@ class UserController extends Controller
             'email' => request()->email,
         ]);
 
+
+        // password check
         if(request()->password){
 
             request()->validate([
@@ -54,7 +56,12 @@ class UserController extends Controller
         return redirect('home');
     }
 
-    public function showChangePasswordForm(){
-        return view('auth.changepassword');
+    public function showFollowing(){
+        $users = Auth::user()->following()->get();
+        return view('users.followinglist', compact('users'));
+    }
+    public function showFollowers(){
+        $users = Auth::user()->followers()->get();
+        return view('users.followerslist', compact('users'));
     }
 }

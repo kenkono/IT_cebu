@@ -13,25 +13,31 @@
                     <div class="text-center">
                         <div class="avatar">
                             <div class="default">
-                                <img src="/images/{{ Auth::user()->avatar }}" style="width:100px;height:100px;">
+                                <img src="/img/{{ $user->avatar }}" style="width:100px;height:100px;">
                             </div>
                         </div>
 
                         <div class="py-2">
-                            <h2>{{ Auth::user()->name }}</h2>
+                            <h2>{{ $user->name }}</h2>
+                                @if(Auth::user()->is_following($user->id))
+                                    <div class="ml-auto">
+                                        <a href="/user/unfollow/{{$user->id}}" class="btn btn-danger"> Unfollow </a>
+                                    </div>
+                                @else
+                                    <div class="ml-auto">
+                                        <a href="/user/follow/{{$user->id}}" class="btn btn-primary"> Follow</a>
+                                    </div>
+                                @endif
                         </div>
-                        <div class="py-2">
-                            <p><a href="/user/edit/{{ Auth::user()->id }}" class="btn btn-primary">Edit Profile</a></p>
-                        </div>
-                        
+
 
                         <div class="row mt-15">
                             <div class="col-sm-6">
-                                <strong><a href="/users">{{ Auth::user()->following()->count() }}</a></strong>
+                                <strong><a href="">{{ $user->following()->count() }}</a></strong>
                                 <div>following</div>
                             </div>
                                 <div class="col-sm-6">
-                                    <strong><a href="/user/followerslist">{{ Auth::user()->followers()->count() }}</a></strong>
+                                    <strong><a href="">{{ $user->followers()->count() }}</a></strong>
                                 <div>followers</div>
                             </div>
                         </div>
@@ -54,11 +60,14 @@
         </div>
 
         <div class="col-sm-8">
-            @include('partials.newPost')
             <div class="activity-feed">
                 <div class="well">
                     <div class="page-header mt-0 text-center"><h2>Blogs</h2></div>
-                    @include('partials.blogs', ['blogs' => $blogs, 'can_edit' => true])
+                    @if(Auth::user()->is_following($user->id))
+                        @include('partials.blogs', ['blogs' => $blogs, 'can_edit' => false])
+                    @else
+                        <p class="text-danger text-center">You are not following this user!</p>
+                    @endif
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@
                                     <div class="list-group-item mb-1"> 
                                         <form class=" d-flex align-items-center" method="post" action="#">
                                             <img src="/images/{{$user->avatar}}" style="width:50px;height:50px;">
-                                            <a class="pl-3" href="">{{$user->name}}</a>
+                                            <a class="pl-3" href="/user/profile/{{$user->id}}">{{$user->name}}</a>
                                             @if(Auth::user()->is_following($user->id))
                                                 <div class="ml-auto">
                                                     <a href="/user/unfollow/{{$user->id}}" class="btn btn-danger">

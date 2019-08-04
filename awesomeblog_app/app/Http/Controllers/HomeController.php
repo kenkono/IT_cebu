@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all();
+        $blogs = Auth::user()->blogs()->orderBy('updated_at', 'desc')->get();
         return view('home', compact('blogs'));
     }
 
@@ -68,5 +68,13 @@ class HomeController extends Controller
         ]);
 
         return redirect('home');
+    }
+
+    public function showUser($id)
+    {
+        
+        $user = User::find($id);
+        $blogs = $user->blogs;
+        return view('users.userinfo', compact('blogs', 'user'));
     }
 }

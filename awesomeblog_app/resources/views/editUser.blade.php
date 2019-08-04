@@ -35,7 +35,7 @@
                 <input type="password" class="form-control" name="password_confirm">
             </div> 
             <div class="text-right">
-                <button class="create-post btn btn-primary" type="submit">Edit</button>
+                <button class="create-post btn btn-primary mt-3" type="submit">Edit</button>
             </div>
         </form>
     </div>
