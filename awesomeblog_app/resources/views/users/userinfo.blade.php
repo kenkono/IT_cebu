@@ -13,7 +13,7 @@
                     <div class="text-center">
                         <div class="avatar">
                             <div class="default">
-                                <img src="/img/{{ $user->avatar }}" style="width:100px;height:100px;">
+                                <img src="/images/{{ $user->avatar }}" style="width:100px;height:100px;">
                             </div>
                         </div>
 

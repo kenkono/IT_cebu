@@ -27,7 +27,7 @@
 
                         <div class="row mt-15">
                             <div class="col-sm-6">
-                                <strong><a href="/users">{{ Auth::user()->following()->count() }}</a></strong>
+                                <strong><a href="/user/followinglist">{{ Auth::user()->following()->count() }}</a></strong>
                                 <div>following</div>
                             </div>
                                 <div class="col-sm-6">
